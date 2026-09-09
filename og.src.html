@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>og 카드 — 보안·간편결제</title>
+<style>
+  /* 아트보드 1200x630. 페이지와 같은 톤(딥 슬레이트·격자·모노 라벨·도해). */
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    width:1200px; height:630px; overflow:hidden; position:relative;
+    background:radial-gradient(75% 60% at 80% 0%, rgba(56,189,248,.16) 0%, transparent 62%), #0b1220;
+    color:#e6edf7;
+    font-family:"Pretendard",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    word-break:keep-all; letter-spacing:-.03em;
+  }
+  body::before{ /* 도면 격자 */
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(56,189,248,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56,189,248,.07) 1px, transparent 1px);
+    background-size:40px 40px;
+    -webkit-mask-image:linear-gradient(160deg,#000 0%, transparent 82%);
+    mask-image:linear-gradient(160deg,#000 0%, transparent 82%);
+  }
+  .mono{font-family:'JetBrainsMono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.08em}
+
+  .board{position:relative; display:flex; height:100%; padding:56px 66px; gap:46px; align-items:center}
+  .left{flex:1; min-width:0}
+
+  .bar{display:flex; align-items:center; gap:11px; margin-bottom:30px}
+  .bar img{width:34px; height:34px; border-radius:9px; display:block}
+  .bar .bn{font-size:17px; font-weight:800}
+  .bar .st{
+    display:flex; align-items:center; gap:7px; font-size:12px; color:#4ade80;
+    border:1px solid rgba(74,222,128,.32); background:rgba(74,222,128,.08);
+    padding:5px 12px; border-radius:6px;
+  }
+  .bar .st i{width:6px; height:6px; border-radius:50%; background:#4ade80}
+
+  .tag{
+    display:inline-block; font-size:12px; color:#38bdf8;
+    border:1px solid rgba(56,189,248,.34); background:rgba(56,189,248,.08);
+    padding:6px 13px; border-radius:6px; margin-bottom:22px;
+  }
+  h1{font-size:52px; font-weight:800; line-height:1.24}
+  h1 .c{color:#38bdf8}
+  .sub{margin-top:22px; font-size:18px; color:#b8c6da; line-height:1.7; max-width:24em}
+  .sub b{color:#e6edf7; font-weight:700}
+
+  .kpi{display:flex; gap:11px; margin-top:32px}
+  .k{background:#121d30; border:1px solid #1f2f49; border-radius:11px; padding:14px 22px}
+  .k .v{font-size:28px; font-weight:800; color:#38bdf8; letter-spacing:-.06em}
+  .k .l{font-size:12px; color:#7386a3; margin-top:2px}
+
+  /* 4관문 스택 */
+  .right{flex:none; width:284px; display:flex; flex-direction:column; gap:10px}
+  .rl{font-size:11px; color:#38bdf8; margin-bottom:4px}
+  .g{
+    display:flex; align-items:center; gap:12px;
+    background:#121d30; border:1px solid #1f2f49; border-radius:11px; padding:13px 15px;
+  }
+  .g .i{
+    width:34px; height:34px; border-radius:9px; flex:none; display:grid; place-items:center;
+    font-size:16px; background:#16233a; border:1px solid #2a3d5c;
+  }
+  .g .n{font-size:15px; font-weight:800}
+  .g .s{font-size:11px; color:#7386a3; margin-top:2px}
+  .g.last{border-color:rgba(56,189,248,.45); background:rgba(56,189,248,.1)}
+</style>
+</head>
+<body>
+  <div class="board">
+    <div class="left">
+      <div class="bar">
+        <img src="{{LOGO}}" alt="">
+        <span class="bn">온리핀스</span>
+        <span class="st"><i></i><span class="mono">24/7 AUTO</span></span>
+      </div>
+
+      <span class="tag mono">SECURITY &amp; PAYMENT</span>
+      <h1>본인을 <span class="c">네 번</span> 확인하고<br>결제는 <span class="c">여섯 자리</span>로</h1>
+      <p class="sub">
+        처음 한 번을 까다롭게 만든 대신,<br>
+        <b>두 번째부터는 간단하게</b> 했습니다.
+      </p>
+
+      <div class="kpi">
+        <div class="k"><div class="v mono">4</div><div class="l">본인확인 관문</div></div>
+        <div class="k"><div class="v mono">6</div><div class="l">결제 비밀번호</div></div>
+        <div class="k"><div class="v mono">0</div><div class="l">카드번호 입력</div></div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="rl mono">IDENTITY PIPELINE</div>
+      <div class="g"><span class="i">📲</span><div><div class="n">PASS 본인확인</div><div class="s mono">STEP 1</div></div></div>
+      <div class="g"><span class="i">☎️</span><div><div class="n">ARS 확인</div><div class="s mono">STEP 2</div></div></div>
+      <div class="g"><span class="i">🗣️</span><div><div class="n">통화 확인</div><div class="s mono">STEP 3 · 일부 고객</div></div></div>
+      <div class="g last"><span class="i">🔐</span><div><div class="n">패스키</div><div class="s mono">STEP 4 · 지문 · 얼굴</div></div></div>
+    </div>
+  </div>
+</body>
+</html>
